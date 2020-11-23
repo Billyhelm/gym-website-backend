@@ -20,7 +20,7 @@ User.destroy_all
 billy = User.create({
     name: "Billy Helm", 
     email: "billyut@rocketmail.com",
-    password: "password",
+    password_digest: "password",
     security_question: "What is your favorite Color?",
     security_answer: "blue",
     status: "admin"
