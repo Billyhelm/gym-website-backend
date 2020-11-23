@@ -129,7 +129,7 @@ ActiveRecord::Schema.define(version: 2020_11_18_225953) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.string "security_question"
     t.string "security_answer"
     t.string "image"

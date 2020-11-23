@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  namespace :api do 
+    namespace :v1 do 
+      resources :users, only: [:create]
+      post '/login', to: 'auth#create'
+      get '/profile', to: 'users#profile'
+    end 
+  end 
+
   resources :reviews
   resources :ratings
   resources :products
@@ -11,6 +19,6 @@ Rails.application.routes.draw do
   resources :orders
   resources :gyms
   resources :discounts
-  resources :users
+  # resources :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
