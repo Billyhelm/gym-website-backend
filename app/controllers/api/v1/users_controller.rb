@@ -16,8 +16,13 @@ class Api::V1::UsersController < ApplicationController
       end
     end
 
+    def update
+      user = User.find(user_params[:id])
+      binding.pry
+    end 
+
     private 
     def user_params 
-        params.require(:user).permit(:name, :email, :password, :security_question, :security_answer, :image, :status)
+        params.require(:user).permit(:id, :name, :email, :password, :security_question, :security_answer, :image, :status)
     end 
 end

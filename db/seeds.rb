@@ -787,14 +787,14 @@ p40 = Product.create({
     })
     ProductCategory.create({
         product_id: p40.id,
-        category_id: jacket.id
+        category_id: accessory.id
     })
     p41 = Product.create({
         name: 'F45 Star Towel',
         color: 'Blue',
         gender: 'MF',
         price: 15.00,
-        image: accessories[0],
+        image: accessories[1],
         description: 'A large towel with the F45 logo'
     })
     ProductGym.create({
@@ -811,7 +811,7 @@ p40 = Product.create({
     })
     ProductCategory.create({
         product_id: p41.id,
-        category_id: jacket.id
+        category_id: accesory.id
     })
 
     clothes = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12,
