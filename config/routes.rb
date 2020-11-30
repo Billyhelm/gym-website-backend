@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   resources :reviews
   resources :ratings
   resources :products
+  resources :product_categories
+  resources :product_gyms
   resources :user_orders
   resources :categories
   resources :quantities

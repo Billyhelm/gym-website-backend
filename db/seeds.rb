@@ -49,7 +49,7 @@ ug1 = UserGym.create({
 
 sizes = ['XS', 'S', 'M', 'L', 'XL']
 newSizes = sizes.map{|size| Size.create({name: size})}
-Size.create({name: 'One Size Fits All'})
+os = Size.create({name: 'One Size Fits All'})
 
 tee = Category.create({name: 'Tee'})
 tank = Category.create({name: 'Tank'})
@@ -789,6 +789,7 @@ p40 = Product.create({
         product_id: p40.id,
         category_id: accessory.id
     })
+    Quantity.create({product_id: p40.id, size_id: os.id, amount: 10})
     p41 = Product.create({
         name: 'F45 Star Towel',
         color: 'Blue',
@@ -811,8 +812,9 @@ p40 = Product.create({
     })
     ProductCategory.create({
         product_id: p41.id,
-        category_id: accesory.id
+        category_id: accessory.id
     })
+    Quantity.create({product_id: p41.id, size_id: os.id, amount: 10})
 
     clothes = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12,
         p13, p14, p15, p16, p17, p18, p19, p20, p21, p22, p23, p24, p25, p26,
