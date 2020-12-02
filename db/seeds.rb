@@ -825,15 +825,15 @@ p40 = Product.create({
     Quantity.create({product_id: product.id, size_id: size.id, amount: 10})
     }}
 
-    o1 = Order.create({status: "pending"})
-    UserOrder.create({user_id: billy.id, order_id: o1.id})
+    # o1 = Order.create({status: "pending"})
+    # UserOrder.create({user_id: billy.id, order_id: o1.id})
     
-    ot1 = OrderItem.create({order_id: o1.id, product_id: p4.id})
-    ot2 = OrderItem.create({order_id: o1.id, product_id: p17.id})
-    ot3 = OrderItem.create({order_id: o1.id, product_id: p22.id})
-    ot4 = OrderItem.create({order_id: o1.id, product_id: p37.id})
+    # ot1 = OrderItem.create({order_id: o1.id, product_id: p4.id})
+    # ot2 = OrderItem.create({order_id: o1.id, product_id: p17.id})
+    # ot3 = OrderItem.create({order_id: o1.id, product_id: p22.id})
+    # ot4 = OrderItem.create({order_id: o1.id, product_id: p37.id})
 
-    price = ot1.product.price + ot2.product.price + ot3.product.price + ot4.product.price
-    o1.update({sub_total: price, total: price})
+    # price = ot1.product.price + ot2.product.price + ot3.product.price + ot4.product.price
+    # o1.update({sub_total: price, total: price})
 
     

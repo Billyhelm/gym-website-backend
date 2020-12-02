@@ -5,7 +5,7 @@ class OrderItemsController < ApplicationController
 
     def create
         order_item = OrderItem.create(order_items_params)
-        # render json: order_item
+        render json: order_item
     end 
 
     private
